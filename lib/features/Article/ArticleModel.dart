@@ -9,8 +9,8 @@ class ArticleModel {
   ArticleModel.fromJSON(Map<String, dynamic> json)
       : id = json['id'],
         title = json['title'],
-        avatar = json['user']['profile_image_90'],
-        reactionCount = json['positive_reactions_count'],
-        tags = json['tag_list'] ?? [],
+        avatar = json['user']['profileImage90'],
+        reactionCount = json['positiveReactionsCount'],
+        tags = json['tags'] ?? [],
         description = json['title'];
 }
