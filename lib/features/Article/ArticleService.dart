@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_graph_ql/features/Article/ArticleModel.dart';
+import 'package:flutter_graph_ql/key.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:http/http.dart' as http;
 
@@ -28,7 +29,7 @@ class ArticleService {
   static String _url = "https://dev.to/api/articles";
 
   static HttpLink link = HttpLink(
-    uri: 'https://serve.onegraph.com/dynamic?app_id=49c25375-a476-445c-a618-5a22aec9d365&show_metrics=true&show_api_request=false'
+    uri: 'https://serve.onegraph.com/dynamic?app_id=$API_ID&show_metrics=true&show_api_request=false'
   );
 
   static GraphQLClient client = GraphQLClient(cache: InMemoryCache(), link: link);
